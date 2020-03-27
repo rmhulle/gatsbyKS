@@ -62,6 +62,9 @@ module.exports = {
                     ? ghostConfig.development
                     : ghostConfig.production,
         },
+        {
+            resolve: `gatsby-plugin-analytics`,
+         },
         /**
          *  Utility Plugins
          */
@@ -109,6 +112,7 @@ module.exports = {
                 ],
             },
         },
+
         {
             resolve: `gatsby-plugin-advanced-sitemap`,
             options: {

@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 
 import { Layout, PostCard, Pagination } from '../components/common'
 import { MetaData } from '../components/common/meta'
+import analytics from '../analytics' // eslint-disable-line
+
 
 /**
 * Main index page (home page)

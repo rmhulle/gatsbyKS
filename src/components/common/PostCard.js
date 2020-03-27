@@ -4,12 +4,21 @@ import { Link } from 'gatsby'
 import { Tags } from '@tryghost/helpers-gatsby'
 import { readingTime as readingTimeHelper } from '@tryghost/helpers'
 
+
 const PostCard = ({ post }) => {
     const url = `/${post.slug}/`
     const readingTime = readingTimeHelper(post)
 
+      function handlePostClik() {
+        Analytics.track('Selecionar Post', {
+          category: 'Topo',
+          label: post.title        
+      })
+      }
+
+
     return (
-        <Link to={url} className="post-card">
+        <Link to={url} className="post-card" onClick={handlePostClik}>
             <header className="post-card-header">
                 {post.feature_image &&
                     <div className="post-card-image" style={{

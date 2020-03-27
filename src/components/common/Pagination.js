@@ -5,12 +5,25 @@ import { Link } from 'gatsby'
 const Pagination = ({ pageContext }) => {
     const { previousPagePath, nextPagePath, humanPageNumber, numberOfPages } = pageContext
 
+      function handleClickNext() {
+        Analytics.track('Paginação', {
+          category: 'Próximo',
+          label: humanPageNumber        
+      })
+      }
+      function handleClickPrevious() {
+        Analytics.track('Paginação', {
+          category: 'Anterior',
+          label: humanPageNumber        
+      })
+      }
+
     return (
         <nav className="pagination" role="navigation">
             <div>
                 {previousPagePath && (
 
-                    <Link to={previousPagePath} rel="prev">
+                    <Link to={previousPagePath} rel="prev" onClick={handleClickPrevious}>
                             Previous
                     </Link>
 
@@ -20,7 +33,7 @@ const Pagination = ({ pageContext }) => {
             <div>
                 {nextPagePath && (
 
-                    <Link to={nextPagePath} rel="next">
+                    <Link to={nextPagePath} rel="next" onClick={handleClickNext}>
                             Next
                     </Link>
                 )}
