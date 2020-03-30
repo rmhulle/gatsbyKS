@@ -17,12 +17,12 @@ const analytics = Analytics({
       googleTagManager({
       containerId: 'GTM-KZ2JGCN',
       assumesPageview: true,
-      debug: true
+      debug: false
     }),
       hotjarPlugin({
       siteId: '1747839',
       assumesPageview: true,
-      debug: true,
+      debug: false,
       sv: 6
     })
   ]
