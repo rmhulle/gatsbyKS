@@ -14,7 +14,9 @@ const analytics = Analytics({
       trackingId: "UA-162002963-1",
     }), //GTM-KZ2JGCN
       googleTagManager({
-      containerId: 'GTM-KZ2JGCN'
+      containerId: 'GTM-KZ2JGCN',
+      assumesPageview: true,
+      debug: true
     })
   ]
 })
