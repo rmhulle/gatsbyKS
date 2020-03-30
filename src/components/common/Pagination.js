@@ -10,6 +10,7 @@ const Pagination = ({ pageContext }) => {
           category: 'Próximo',
           label: humanPageNumber        
       })
+      
       }
       function handleClickPrevious() {
         Analytics.track('Paginação', {

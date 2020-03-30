@@ -9,16 +9,15 @@ const PostCard = ({ post }) => {
     const url = `/${post.slug}/`
     const readingTime = readingTimeHelper(post)
 
-      function handlePostClik() {
+      function handlePostClick() {
         Analytics.track('Selecionar Post', {
           category: 'Topo',
-          label: post.title        
-      })
+          label: post.title,
+          })
       }
 
-
     return (
-        <Link to={url} className="post-card" onClick={handlePostClik}>
+        <Link to={url} className="post-card" onClick={handlePostClick}>
             <header className="post-card-header">
                 {post.feature_image &&
                     <div className="post-card-image" style={{

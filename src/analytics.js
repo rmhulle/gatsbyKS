@@ -1,16 +1,21 @@
 /* analytics.js */
 import Analytics from 'analytics'
 import googleAnalytics from '@analytics/google-analytics'
+import googleTagManager from '@analytics/google-tag-manager'
 
-// ... whatever analytics provider you use
+
+// TODO Instalar o noScript do TagManager.
 
 const analytics = Analytics({
   app: 'GatsbyKS',
   debug: true,
   plugins: [
-     googleAnalytics({
+      googleAnalytics({
       trackingId: "UA-162002963-1",
-    }),
+    }), //GTM-KZ2JGCN
+      googleTagManager({
+      containerId: 'GTM-KZ2JGCN'
+    })
   ]
 })
 
