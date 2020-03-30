@@ -39,6 +39,8 @@
   "dependencies": {
     "@analytics/google-analytics": "^0.2.2",
     "@analytics/google-tag-manager": "^0.2.3",
+    "@tegrus/analytics-plugin-google-tag-manager": "^0.2.3",
+    "@tegrus/analytics-plugin-hotjar": "0.0.1",
     "@tryghost/helpers": "1.1.22",
     "@tryghost/helpers-gatsby": "1.0.25",
     "analytics": "^0.3.1",

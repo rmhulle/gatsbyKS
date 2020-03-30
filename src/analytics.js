@@ -1,7 +1,8 @@
 /* analytics.js */
 import Analytics from 'analytics'
 import googleAnalytics from '@analytics/google-analytics'
-import googleTagManager from '@analytics/google-tag-manager'
+import googleTagManager from '@tegrus/analytics-plugin-google-tag-manager'
+import hotjarPlugin from '@tegrus/analytics-plugin-hotjar'
 
 
 // TODO Instalar o noScript do TagManager.
@@ -17,6 +18,12 @@ const analytics = Analytics({
       containerId: 'GTM-KZ2JGCN',
       assumesPageview: true,
       debug: true
+    }),
+      hotjarPlugin({
+      siteId: '1747839',
+      assumesPageview: true,
+      debug: true,
+      sv: 6
     })
   ]
 })
