@@ -21,9 +21,9 @@ const analytics = Analytics({
     }),
       hotjarPlugin({
       siteId: '1747839',
-      assumesPageview: true,
       debug: false,
-      sv: 6
+      sv: 6,
+      pageViewMode:'vpv' 
     })
   ]
 })
