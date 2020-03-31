@@ -37,6 +37,7 @@
     "eslint-plugin-react": "7.18.3"
   },
   "dependencies": {
+    "@analytics/google-analytics": "^0.2.2",
     "@tegrus/analytics-plugin-google-tag-manager": "^0.2.4",
     "@tegrus/analytics-plugin-hotjar": "0.0.2",
     "@tryghost/helpers": "1.1.22",
