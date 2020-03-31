@@ -18,16 +18,9 @@ const analytics = Analytics({
       containerId: 'GTM-KZ2JGCN',
       assumesPageview: true,
       debug: false
-    }),
-      hotjarPlugin({
-      siteId: '1747839',
-      debug: false,
-      sv: 6,
-      pageViewMode:'vpv' 
     })
   ]
 })
-
 
 analytics.on('page', ({ payload }) => {
   console.log('page view fired', payload)
@@ -43,3 +36,11 @@ if (typeof window !== 'undefined') {
 }
 
 export default analytics
+
+
+    //   hotjarPlugin({
+    //   siteId: '1747839',
+    //   debug: false,
+    //   sv: 6,
+    //   pageViewMode:'vpv' 
+    // })
